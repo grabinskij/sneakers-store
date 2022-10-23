@@ -1,25 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './scss/app.scss';
+import Home from "./pages/Home";
+import {Routes, Route} from "react-router-dom";
+import MainLayout from "./latouts/MainLayout";
+import {lazy, Suspense} from "react";
+
+const Cart = lazy(() => import(/* webpackChunkName: 'Cart' */'./pages/Cart'))
+const FullProduct = lazy(() => import(/* webpackChunkName: 'FullProduct' */'./pages/FullProduct'))
+const NotFound = lazy(() => import(/* webpackChunkName: 'NotFound' */'./pages/NotFound'))
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    return (
+        <Routes>
+            <Route path="/" element={<MainLayout />}>
+                <Route path="" element={<Home />} />
+                <Route path="cart" element={
+                    <Suspense fallback={<div>Йде завантаження кошика...</div>}>
+                        <Cart />
+                    </Suspense>
+                    }
+                />
+                <Route path="sneakers/:id" element={
+                    <Suspense fallback={<div>Йде завантаження...</div>}>
+                        <FullProduct />
+                    </Suspense>
+                    }
+                />
+                <Route path="*" element={
+                    <Suspense fallback={<div>Йде завантаження...</div>}>
+                        <NotFound />
+                    </Suspense>
+                    }
+                />
+            </Route>
+        </Routes>
+
   );
 }
 
