@@ -1,0 +1,213 @@
+@import '../variables';
+
+.product-block {
+  width: 280px;
+  //height: fit-content;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  transition: all 0.2s ease-in 0.1s;
+  position: relative;
+  border: 1px solid rgba( 0, 0, 0, 0.05);
+  padding: 10px;
+  @media (max-width: 1400px) {
+    width: 220px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  &:hover{
+      position: absolute;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      background-color: white;
+      @media (max-width: 580px) {
+        position: relative;
+      }
+
+    .product-block__selector {
+        transition: all 0.4s ease 0.4s;
+        display: flex;
+        opacity: 1;
+        height: auto;
+      }
+
+      .product-block__selector-title {
+        display: block;
+        opacity: 1;
+        height: auto;
+        transition: all 0.4s ease 0.4s;
+      }
+  }
+  &-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  &__image {
+    width: 260px;
+    margin-bottom: 20px;
+    @media (max-width: 1400px) {
+      width: 200px;
+    }
+    &-btn {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      width: 40px;
+      height: 40px;
+      border: none;
+    }
+    &_sale{
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+    &_favorite{
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    @media (max-width: 1400px) {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+  }
+  &__description{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media (max-width: 1400px) {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  &__selector {
+    height: 0;
+    opacity: 0;
+    flex-direction: column;
+    padding: 6px;
+    @media (max-width: 915px) {
+      height: auto;
+      opacity: 1;
+    }
+    &-title{
+      height: 0;
+      opacity: 0;
+      font-size: 14px;
+      margin-bottom: 0;
+      @media (max-width: 915px) {
+        height: auto;
+        opacity: 1;
+      }
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1;
+      @media (max-width: 1400px) {
+        justify-content: center;
+      }
+
+      &:first-of-type {
+        margin-bottom: 6px;
+      }
+
+      li {
+        padding: 6px 16px;
+        margin: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        border: 1px solid #181818;
+        border-radius: 4px;
+        @include noselect();
+        @media (max-width: 1400px) {
+          font-size: 12px;
+        }
+        &.active {
+          background: #282828;
+          color: white;
+          border-radius: 5px;
+          cursor: auto;
+        }
+        &:hover{
+          background-color: #282828;
+          transition: all 0.3s ease;
+          color: white;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.015em;
+    @media (max-width: 1400px) {
+      font-size: 16px;
+      line-height: 10px;
+    }
+  }
+}
+.prodRow{
+  display: grid;
+  position: relative;
+  //grid-template-columns: repeat(4, 1fr);
+  //grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 11px;
+  padding: 10px;
+  border-bottom: 1px solid #777777;
+  &:last-child{
+    border: none;
+  }
+  & .product-block-wrapper{
+    &:only-child{
+        position: relative;
+        min-height: 419px;
+    }
+  }
+
+  @media (min-width: 1169px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (min-width: 899px) and (max-width: 1169px){
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width: 580px) and (max-width: 899px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 580px) {
+    grid-template-columns: repeat(1, 1fr);
+    border: none;
+    padding: 0;
+  }
+}
+
+.pagWrapper{
+  text-align: center;
+}
+

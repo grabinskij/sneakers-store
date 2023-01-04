@@ -1,0 +1,93 @@
+.decor {
+  position: relative;
+  max-width: 500px;
+  margin: 50px auto 0;
+  background: #7D7263;
+  border-radius: 30px;
+}
+.formLeftDecoration, .formRightDecoration {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: white;
+  border-radius: 20px;
+  @media (max-width: 730px){
+   display: none;
+  }
+}
+.formLeftDecoration {
+  bottom: 60px;
+  left: -30px;
+}
+.formRightDecoration {
+  top: 60px;
+  right: -30px;
+}
+.formLeftDecoration:before, .formLeftDecoration:after, .formRightDecoration:before, .formRightDecoration:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  border-radius: 30px;
+  background: #7D7263;
+
+}
+.formLeftDecoration:before {
+  top: -20px;
+}
+.formLeftDecoration:after {
+  top: 20px;
+  left: 10px;
+}
+.formRightDecoration:before {
+  top: -20px;
+  right: 0;
+}
+.formRightDecoration:after {
+  top: 20px;
+  right: 10px;
+}
+.circle {
+  position: absolute;
+  bottom: 80px;
+  left: -55px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #7D7263;
+  @media (max-width: 730px){
+    display: none;
+  }
+
+}
+.formInner {
+  padding: 50px;
+  @media (max-width: 730px){
+    padding: 30px;
+  }
+}
+.formInner input{
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+.formInner button {
+  display: block;
+  margin-top: 30px;
+  background: #fe5f1e;
+  width: 100%;
+  padding: 0 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}

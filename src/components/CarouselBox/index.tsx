@@ -5,7 +5,7 @@ import video3 from "../../assets/adVideo/ad-3.mp4";
 import ReactPlayer from "react-player";
 import {Link} from "react-router-dom";
 
-const CarouselBox = () => {
+export const CarouselBox = () => {
     const videoProperties = [
         {
             id: 1,
@@ -27,14 +27,15 @@ const CarouselBox = () => {
         }
     ]
     return (
-        <Carousel className="carousel" interval={10000}>
+        <div className="carousel">
+        <Carousel className="carousel-container" fade>
             {videoProperties.map((videoObj) => {
                 return(
                     <Carousel.Item key={videoObj.id}>
                         <Link key={videoObj.id} to={`/sneakers/${videoObj.id}`}>
-                        <div className='player-wrapper'>
+                        <div className='carousel__item'>
                         <ReactPlayer
-                            className='react-player'
+                            className='carousel__item_player'
                             url={videoObj.src}
                             muted={true}
                             loop={true}
@@ -54,7 +55,6 @@ const CarouselBox = () => {
                 )
             })}
         </Carousel>
+        </div>
     );
 }
-
-export default CarouselBox;

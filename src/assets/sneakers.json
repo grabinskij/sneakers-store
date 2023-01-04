@@ -1,0 +1,209 @@
+[
+  {
+    "id": "0",
+    "imageUrl": "/sneakers/1.jpg",
+    "title": "Super Star",
+    "description": "Сlassic sneakers for men (green)",
+    "saleImg": "",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "price": 86,
+    "category": [
+      1,
+      4
+    ],
+    "rating": 4,
+    "favorited": false
+  },
+  {
+    "id": "1",
+    "imageUrl": "/sneakers/2.jpg",
+    "title": "Born Rich",
+    "description": "Super comfortable sneakers for men",
+    "saleImg": "/icons/sale.svg",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "price": 45,
+    "category": [
+      1,
+      5
+    ],
+    "rating": 6,
+    "favorited": false
+  },
+  {
+    "id": "2",
+    "imageUrl": "/sneakers/3.jpg",
+    "title": "Zaba",
+    "description": "Classic sneakers for men (white)",
+    "saleImg": "/icons/sale.svg",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "price": 70,
+    "category": [
+      1,
+      5
+    ],
+    "rating": 4,
+    "favorited": false
+  },
+  {
+    "id": "3",
+    "imageUrl": "/sneakers/4.jpg",
+    "title": "XR-7",
+    "description": "Unique outsole technology",
+    "saleImg": "",
+    "sizes": [
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "price": 75,
+    "category": 3,
+    "rating": 2,
+    "favorited": false
+  },
+  {
+    "id": "4",
+    "imageUrl": "/sneakers/5.jpg",
+    "title": "Abida",
+    "description": "Masterpiece from italian designers",
+    "saleImg": "/icons/sale.svg",
+    "sizes": [
+      35,
+      36,
+      37,
+      38,
+      38,
+      40
+    ],
+    "price": 67,
+    "category": [
+      2,
+      5
+    ],
+    "rating": 8,
+    "favorited": false
+  },
+  {
+    "id": "5",
+    "imageUrl": "/sneakers/6.jpg",
+    "title": "Crazy",
+    "description": "Unique design",
+    "saleImg": "",
+    "sizes": [
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "price": 58,
+    "category": 2,
+    "rating": 2,
+    "favorited": false
+  },
+  {
+    "id": "6",
+    "imageUrl": "/sneakers/7.jpg",
+    "title": "Big Maxx",
+    "description": "Reliable and durable",
+    "saleImg": "",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "price": 39,
+    "category": [
+      1,
+      4
+    ],
+    "rating": 9,
+    "favorited": false
+  },
+  {
+    "id": "7",
+    "imageUrl": "/sneakers/8.jpg",
+    "title": "Lazy Frog",
+    "description": "Comfortable men's sneakers",
+    "saleImg": "",
+    "sizes": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "price": 44,
+    "category": 1,
+    "rating": 10,
+    "favorited": false
+  },
+  {
+    "id": "8",
+    "imageUrl": "/sneakers/9.jpg",
+    "title": "Wing",
+    "description": "Classic women's sneakers",
+    "saleImg": "/icons/sale.svg",
+    "sizes": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "price": 49,
+    "category": [
+      2,
+      5
+    ],
+    "rating": 10,
+    "favorited": false
+  },
+  {
+    "id": "9",
+    "imageUrl": "/sneakers/10.jpg",
+    "title": "New S",
+    "description": "Very comfortable with breathable soles",
+    "saleImg": "",
+    "sizes": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "price": 55,
+    "category": 3,
+    "rating": 7,
+    "favorited": false
+  }
+]
