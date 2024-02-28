@@ -9,4 +9,9 @@ export * from './Pagination'
 export * from './NotFoundBlock'
 export * from './Sort'
 export * from './CarouselBox'
+export * from './Terms'
+export * from './ButtonHome'
+export * from './LegalNotice'
+export * from './PrivacyPolicy'
+
 

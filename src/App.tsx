@@ -3,6 +3,8 @@ import Home from "./pages/Home";
 import {Routes, Route} from "react-router-dom";
 import MainLayout from "./latouts/MainLayout";
 import React, {lazy, Suspense} from "react";
+import { LegalNotice } from './components/LegalNotice';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
 
 
 const Cart = lazy(() => import(/* webpackChunkName: 'Cart' */'./pages/Cart'))
@@ -52,6 +54,18 @@ function App() {
                 <Route path="profile" element={
                     <Suspense fallback={<div>Downloading...</div>}>
                         <Profile/>
+                    </Suspense>
+                }
+                />
+                  <Route path="legal-notice" element={
+                    <Suspense fallback={<div>Downloading...</div>}>
+                        <LegalNotice/>
+                    </Suspense>
+                }
+                />
+                  <Route path="privacy-policy" element={
+                    <Suspense fallback={<div>Downloading...</div>}>
+                        <PrivacyPolicy/>
                     </Suspense>
                 }
                 />

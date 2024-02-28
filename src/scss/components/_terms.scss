@@ -1,0 +1,27 @@
+a:hover{
+    color: #696363;
+}
+
+.terms-wrapper{
+    z-index: 9999;
+}
+
+.terms-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+
+.terms-link {
+    text-decoration: none;
+    color: #858585;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.terms-link:last-child {
+    margin-right: 0;
+  }
