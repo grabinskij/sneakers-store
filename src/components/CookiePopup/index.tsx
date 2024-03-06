@@ -111,7 +111,7 @@ export const CookiePopup: React.FC<CookiePopupProps>  = ({setShow, setShowChange
                             <div className="cookie-popup-text">
                                 {language === 'English' ? (
                                     <>
-                                        <p>By clicking the "Accept All" button, you consent to this website using
+                                        <p>By clicking the &quot;Accept All&quot; button, you consent to this website using
                                             cookies and
                                             similar
                                             technologies to store and retrieve information on your device. These
@@ -149,7 +149,7 @@ export const CookiePopup: React.FC<CookiePopupProps>  = ({setShow, setShowChange
                                 ) : (
                                     <>
                                         <p>
-                                            Durch Betätigung der Schaltfläche "Alle akzeptieren" geben Sie Ihre
+                                            Durch Betätigung der Schaltfläche &quot;Alle akzeptieren&quot; geben Sie Ihre
                                             Zustimmung, dass diese Webseite
                                             Cookies und ähnliche Technologien einsetzt, um Informationen auf Ihrem
                                             Endgerät zu speichern und
