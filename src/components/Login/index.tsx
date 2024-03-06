@@ -6,7 +6,12 @@ import {setUser} from "../../redux/user/slice";
 import {useNavigate} from "react-router-dom";
 
 
-export const Login: React.FC = () => {
+interface LoginProps {
+    isButtonVisible: boolean;
+    setPopupVisible: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export const Login: React.FC<LoginProps> = ({ isButtonVisible, setPopupVisible}) => {
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
     const handleLogin = (email: string, password: string) => {
@@ -28,6 +33,8 @@ export const Login: React.FC = () => {
             <Form
                 title="Sign in"
                 handleClick={handleLogin}
+                isButtonVisible={isButtonVisible}
+                setPopupVisible={setPopupVisible}
             />
         </div>
     )

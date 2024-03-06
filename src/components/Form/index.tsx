@@ -4,9 +4,11 @@ import styles from './Form.module.scss'
 interface FormProps {
     title: string;
     handleClick: (email: string, pass: string) => void;
+    isButtonVisible: boolean;
+    setPopupVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Form: React.FC<FormProps> = ({title, handleClick}) => {
+const Form: React.FC<FormProps> = ({title, handleClick, isButtonVisible, setPopupVisible}) => {
     const [email, setEmail] = useState('')
     const [emailDirty, setEmailDirty] = useState(false)
     const [emailError, setEmailError] = useState('Email can not be empty')
@@ -16,9 +18,9 @@ const Form: React.FC<FormProps> = ({title, handleClick}) => {
     const [formValid, setFormValid] = useState(false)
 
     useEffect(() => {
-        if(emailError || passError){
+        if (emailError || passError) {
             setFormValid(false)
-        }else{
+        } else {
             setFormValid(true)
         }
     }, [emailError, passError])
@@ -26,26 +28,26 @@ const Form: React.FC<FormProps> = ({title, handleClick}) => {
     const emailHandler = (e: any) => {
         setEmail(e.target.value)
         const valEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        if(!valEmail.test(String(e.target.value).toLowerCase())){
+        if (!valEmail.test(String(e.target.value).toLowerCase())) {
             setEmailError('Email is not correct')
-        }else{
+        } else {
             setEmailError("")
         }
     }
     const passHandler = (e: any) => {
         setPass(e.target.value)
-            if(e.target.value.length < 5 || e.target.value.length > 10){
-                setPassError('Password should be longer than 3 and shorter than 10')
-                if(!e.target.value){
-                    setPassError('Password can not be empty')
-                }
-            }else{
-                setPassError("")
+        if (e.target.value.length < 5 || e.target.value.length > 10) {
+            setPassError('Password should be longer than 3 and shorter than 10')
+            if (!e.target.value) {
+                setPassError('Password can not be empty')
+            }
+        } else {
+            setPassError("")
         }
     }
 
     const blurHandler = (e: any) => {
-        switch (e.target.name){
+        switch (e.target.name) {
             case 'email':
                 setEmailDirty(true)
                 break
@@ -53,7 +55,10 @@ const Form: React.FC<FormProps> = ({title, handleClick}) => {
                 setPassDirty(true)
                 break
         }
-        console.log('123',e.target.name)
+    }
+
+    const showConsentBanner = () => {
+        setPopupVisible(true);
     }
 
     return (
@@ -80,12 +85,23 @@ const Form: React.FC<FormProps> = ({title, handleClick}) => {
                     onChange={e => passHandler(e)}
                     placeholder="password"
                 />
-                <button
-                    disabled={!formValid}
-                    onClick={() => handleClick(email, pass)}
-                >
-                    {title}
-                </button>
+                { isButtonVisible ? (
+                        <button
+                            disabled={!formValid}
+                            onClick={() => handleClick(email, pass)}
+                        >
+                            {title}
+                        </button>
+                    )
+                    :
+                    (
+                        <div className={styles.cookieNotConsent}>
+                            <p>During registration or login, this form uses cookies. To proceed with registration, please accept
+                                the <span onClick={showConsentBanner}>cookie usage agreement</span> and other privacy settings.
+                            </p>
+                        </div>
+                    )
+                }
             </div>
         </div>
     )

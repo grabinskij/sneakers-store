@@ -1,0 +1,44 @@
+.change-consent-banner{
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 9999;
+  & button{
+    border-radius: 50%;
+    background-color: #fbac53;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &:hover{
+      background-color: #4B0082;
+    }
+  }
+}
+
+.custom-cookie-svg{
+  width: 36px;
+  height: 36px;
+  fill: rgba(0, 0, 0, 1);
+}
+
+.change-consent-banner button:hover .custom-cookie-svg {
+  fill: #fbac53;
+}
+
+.visible {
+  display: block;
+}
+
+@media(max-width: 540px){
+  .change-consent-banner{
+    bottom: 6px;
+    right: 6px;
+  }
+  .custom-cookie-svg{
+    width: 18px;
+    height: 18px;
+  }
+}

@@ -154,9 +154,11 @@ export const PrivacyPolicy:FC = () => {
                         Third-party
                         cookies enable the integration of specific services from external providers.
                     </p>
-                    <p>They serve various functions. When we obtain your consent for the storage of cookies and similar
-                        technologies,
-                        processing is based solely on this consent.
+                    <p>The storage of cookies is carried out in accordance with Art. 6 para. 1 lit. f GDPR, unless there is another
+                        legal basis. The operator of the website has a legitimate interest in storing necessary cookies to provide its
+                        services technically flawless and optimized. If consent has been requested for the storage of cookies and
+                        similar tracking technologies, the processing is carried out exclusively on the basis of this consent (Art. 6
+                        para. 1 lit. a GDPR and § 25 para. 1 TTDSG); this consent can be revoked at any time.
                     </p>
                     <p>You have the option to configure your browser to inform you about the setting of cookies, to allow
                         them only in
@@ -564,10 +566,14 @@ export const PrivacyPolicy:FC = () => {
                         Drittanbieter-Cookies ermöglichen die Integration spezifischer Dienste von externen
                         Anbietern.
                     </p>
-                    <p>Sie erfüllen verschiedene Funktionen. Wenn wir Ihre Einwilligung zur Speicherung von Cookies
-                        und ähnlichen
-                        Technologien einholen, erfolgt die Verarbeitung ausschließlich auf Grundlage dieser
-                        Einwilligung.
+                    <p>Die Speicherung von Cookies erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO, sofern keine
+                        andere Rechtsgrundlage vorliegt. Der Betreiber der Website hat ein legitimes Interesse an der Speicherung von
+                        notwendigen Cookies, um seine Dienste technisch einwandfrei und optimiert bereitzustellen. Falls um Einwilligung
+                        zur
+                        Speicherung von Cookies und ähnlichen Tracking-Technologien gebeten wurde, erfolgt die Verarbeitung
+                        ausschließlich
+                        auf Basis dieser Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG); diese
+                        Einwilligung kann jederzeit widerrufen werden.
                     </p>
                     <p>Sie haben die Möglichkeit, Ihren Browser so einzustellen, dass Sie über das Setzen von
                         Cookies informiert werden,

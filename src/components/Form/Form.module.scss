@@ -91,3 +91,14 @@
   border-width: 0;
   border-radius: 20px;
 }
+.cookieNotConsent p{
+  color: red;
+}
+
+.cookieNotConsent p span{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.cookieNotConsent p span:hover{
+  color: red;
+}

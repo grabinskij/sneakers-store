@@ -2,9 +2,12 @@ import './scss/app.scss';
 import Home from "./pages/Home";
 import {Routes, Route} from "react-router-dom";
 import MainLayout from "./latouts/MainLayout";
-import React, {lazy, Suspense} from "react";
+import React, {lazy, Suspense, useState} from "react";
 import { LegalNotice } from './components/LegalNotice';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
+import {Overlay} from "./components/Overlay";
+import {CookiePopup} from "./components/CookiePopup";
+import {ChangeConsentBanner} from "./components/CookieChangeConsent";
 
 
 const Cart = lazy(() => import(/* webpackChunkName: 'Cart' */'./pages/Cart'))
@@ -17,7 +20,25 @@ const NotFound = lazy(() => import(/* webpackChunkName: 'NotFound' */'./pages/No
 
 
 function App() {
+
+    const [showOverlay, setShowOverlay] = useState(false);
+    const [showChangeConsent, setShowChangeConsent] = useState(false);
+    const [popupVisible, setPopupVisible] = useState(false);
+    const [isButtonVisible, setIsButtonVisible] = useState(false);
+
+
     return (
+        <>
+        <Overlay show={showOverlay} />
+            <CookiePopup
+                setIsButtonVisible={setIsButtonVisible}
+                setPopupVisible={setPopupVisible}
+                popupVisible={popupVisible}
+                setShow={setShowOverlay}
+                setShowChangeConsent={setShowChangeConsent}/>
+            <ChangeConsentBanner
+                setShowPopup={setPopupVisible}
+                showChangeConsent={showChangeConsent}/>
         <Routes>
             <Route path="/" element={<MainLayout/>}>
                 <Route path="" element={<Home/>}/>
@@ -41,13 +62,13 @@ function App() {
                 />
                 <Route path="login" element={
                     <Suspense fallback={<div>Downloading...</div>}>
-                        <LoginPage/>
+                        <LoginPage isButtonVisible={isButtonVisible} setPopupVisible={setPopupVisible}/>
                     </Suspense>
                 }
                 />
                 <Route path="register" element={
                     <Suspense fallback={<div>Downloading...</div>}>
-                        <Register/>
+                        <Register isButtonVisible={isButtonVisible} setPopupVisible={setPopupVisible}/>
                     </Suspense>
                 }
                 />
@@ -77,6 +98,7 @@ function App() {
                 />
             </Route>
         </Routes>
+        </>
     );
 }
 
