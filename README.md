@@ -1,4 +1,4 @@
-# 🚀 React Portfolio
+# 🚀 SneakerX
 
 Welcome to SneakerX, an online sneaker shop. SneakerX offers a modern and responsive shopping experience where users can browse a wide range of sneakers, manage their cart, and securely authenticate.
 
